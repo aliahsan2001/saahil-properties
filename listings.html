@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Listings · Saahil Properties</title>
+<meta name="description" content="Apartments, houses and plots for sale in DHA and Clifton, Karachi. Filter by type, area, bedrooms and budget, with travel times to the beach, schools and hospitals.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="listings">
+
+  <section class="page-head" aria-labelledby="ls-title">
+    <div class="container">
+      <p class="eyebrow">Listings</p>
+      <h1 id="ls-title" class="display" data-rise>Every property,<br><em>one place.</em></h1>
+      <p class="lead">Our whole inventory across DHA and Clifton. Hover a home to see how far it is from the beach, a school and a hospital.</p>
+    </div>
+  </section>
+
+  <section class="filters-wrap" aria-label="Filter listings">
+    <div class="container">
+      <form class="filters" data-filters>
+        <fieldset class="f-group">
+          <legend class="label">Type</legend>
+          <div class="seg" data-f="type">
+            <button type="button" data-v="" aria-pressed="true">All</button>
+            <button type="button" data-v="Apartment" aria-pressed="false">Apartments</button>
+            <button type="button" data-v="House" aria-pressed="false">Houses</button>
+            <button type="button" data-v="Plot" aria-pressed="false">Plots</button>
+          </div>
+        </fieldset>
+        <fieldset class="f-group">
+          <legend class="label">Area</legend>
+          <div class="seg" data-f="area">
+            <button type="button" data-v="" aria-pressed="true">Both</button>
+            <button type="button" data-v="DHA" aria-pressed="false">DHA</button>
+            <button type="button" data-v="Clifton" aria-pressed="false">Clifton</button>
+          </div>
+        </fieldset>
+        <div class="f-selects">
+          <div class="field f-mini"><label for="f-beds">Bedrooms</label><select id="f-beds" name="beds"><option value="">Any</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></div>
+          <div class="field f-mini"><label for="f-max">Budget</label><select id="f-max" name="max"><option value="">Any</option><option value="50000000">Up to Rs 5 crore</option><option value="100000000">Up to Rs 10 crore</option><option value="200000000">Up to Rs 20 crore</option><option value="400000000">Up to Rs 40 crore</option></select></div>
+          <div class="field f-mini"><label for="f-sort">Sort</label><select id="f-sort" name="sort"><option value="featured">Featured</option><option value="low">Price, low to high</option><option value="high">Price, high to low</option><option value="beach">Closest to the beach</option></select></div>
+        </div>
+      </form>
+      <p class="f-count" aria-live="polite" data-count-text></p>
+    </div>
+  </section>
+
+  <section class="section-tight listings" aria-label="Results">
+    <div class="container">
+      <div class="card-grid" data-grid></div>
+      <div class="empty" data-empty hidden>
+        <h2 class="display">Nothing matches <em>just yet.</em></h2>
+        <p>Try a wider budget or both areas. Or tell us what you're after and we'll call when it comes in.</p>
+        <div class="empty-actions"><button type="button" class="btn btn-line" data-reset>Clear filters</button><a class="btn btn-gold" href="/contact">Tell an agent</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @include footer -->
+</body>
+</html>

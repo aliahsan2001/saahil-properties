@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Sell your property · Saahil Properties</title>
+<meta name="description" content="Get a free valuation for your apartment, house or plot in DHA or Clifton. Four short steps, and an agent sends you a price range the same day.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="sell">
+
+  <section class="page-head" aria-labelledby="sell-title">
+    <div class="container">
+      <p class="eyebrow">Sell your property</p>
+      <h1 id="sell-title" class="display" data-rise>What's it <em>worth?</em></h1>
+      <p class="lead">Four short steps. Each one you finish draws a little more of the house, and at the end you get a valuation range, with an agent ready to call the same day.</p>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-label="Valuation">
+    <div class="container valuation">
+      <div class="val-art">
+        <div class="val-sheet">
+          <svg class="house-draw" viewBox="0 0 400 330" aria-hidden="true" data-house>
+            <g class="hd-glow"><rect x="100" y="190" width="50" height="50"/><rect x="250" y="190" width="50" height="50"/><rect x="175" y="215" width="50" height="75"/></g>
+            <path class="hd" data-seg="0" pathLength="1" d="M20 290H380M70 290V156M330 290V156M70 156H330"/>
+            <path class="hd" data-seg="1" pathLength="1" d="M46 162L200 48L354 162"/>
+            <path class="hd" data-seg="2" pathLength="1" d="M175 290V215H225V290M100 190H150V240H100ZM250 190H300V240H250ZM125 190V240M100 215H150M275 190V240M250 215H300"/>
+            <path class="hd" data-seg="3" pathLength="1" d="M268 102V66H294V121M190 290L178 318M210 290L222 318M356 290V252M356 252C336 252 330 216 356 204C382 216 376 252 356 252"/>
+          </svg>
+          <ol class="val-steps" data-val-steps>
+            <li>The property</li><li>Size &amp; condition</li><li>What makes it special</li><li>How to reach you</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="val-form-wrap">
+        <form class="val-form" data-val novalidate>
+          <p class="val-progress label" aria-live="polite" data-val-progress>Step 1 of 4</p>
+
+          <fieldset class="val-step" data-step="0">
+            <legend class="display">Tell us about the property</legend>
+            <div class="choice-row" role="radiogroup" aria-label="Property type">
+              <label class="choice"><input type="radio" name="type" value="Apartment" checked><svg aria-hidden="true"><use href="#i-building"/></svg><span>Apartment</span></label>
+              <label class="choice"><input type="radio" name="type" value="House"><svg aria-hidden="true"><use href="#i-home"/></svg><span>House</span></label>
+              <label class="choice"><input type="radio" name="type" value="Plot"><svg aria-hidden="true"><use href="#i-plot"/></svg><span>Plot</span></label>
+            </div>
+            <div class="form-grid">
+              <div class="field"><label for="v-area">Area</label><select id="v-area" name="area"><option>DHA</option><option>Clifton</option></select></div>
+              <div class="field"><label for="v-loc">Phase or block</label><input id="v-loc" name="loc" placeholder="e.g. Phase 6, or Block 2" required><p class="field-error" id="e-loc"></p></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="val-step" data-step="1" hidden>
+            <legend class="display">Size and condition</legend>
+            <div class="form-grid">
+              <div class="field"><label for="v-size" data-size-label>Covered area (sq ft)</label><input id="v-size" name="size" type="number" inputmode="numeric" min="100" required><p class="field-error" id="e-size"></p></div>
+              <div class="field" data-not-plot><label for="v-beds">Bedrooms</label><select id="v-beds" name="beds"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+            </div>
+            <p class="field-label label">Condition</p>
+            <div class="choice-row small" role="radiogroup" aria-label="Condition">
+              <label class="choice"><input type="radio" name="cond" value="new"><span>New or renovated</span></label>
+              <label class="choice"><input type="radio" name="cond" value="good" checked><span>Good</span></label>
+              <label class="choice"><input type="radio" name="cond" value="work"><span>Needs work</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="val-step" data-step="2" hidden>
+            <legend class="display">What makes it special?</legend>
+            <p class="val-hint">Tick anything that applies. Each one nudges the price.</p>
+            <div class="tick-grid">
+              <label class="tick"><input type="checkbox" name="extra" value="Sea-facing"><span>Sea-facing</span></label>
+              <label class="tick"><input type="checkbox" name="extra" value="Corner"><span>Corner</span></label>
+              <label class="tick"><input type="checkbox" name="extra" value="Park-facing"><span>Park-facing</span></label>
+              <label class="tick"><input type="checkbox" name="extra" value="Basement"><span>Basement</span></label>
+              <label class="tick"><input type="checkbox" name="extra" value="Pool"><span>Pool</span></label>
+              <label class="tick"><input type="checkbox" name="extra" value="Solar"><span>Solar power</span></label>
+            </div>
+            <div class="field"><label for="v-when">When would you like to sell?</label><select id="v-when" name="when"><option>As soon as possible</option><option>In the next 3 months</option><option>Just curious for now</option></select></div>
+          </fieldset>
+
+          <fieldset class="val-step" data-step="3" hidden>
+            <legend class="display">How should we reach you?</legend>
+            <div class="form-grid">
+              <div class="field"><label for="v-name">Your name</label><input id="v-name" name="name" autocomplete="name" required><p class="field-error" id="e-name"></p></div>
+              <div class="field"><label for="v-phone">Mobile</label><input id="v-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx" required><p class="field-error" id="e-phone"></p></div>
+            </div>
+            <div class="field"><label for="v-time">Best time to call <span class="optional">(optional)</span></label><select id="v-time" name="time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+          </fieldset>
+
+          <div class="val-nav">
+            <button type="button" class="btn btn-line" data-back hidden><svg aria-hidden="true"><use href="#i-back"/></svg>Back</button>
+            <button type="submit" class="btn btn-gold" data-next>Next <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </form>
+        <div class="val-done" data-val-done hidden tabindex="-1"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- @include footer -->
+</body>
+</html>

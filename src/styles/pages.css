@@ -1,0 +1,36 @@
+/* =========================================================
+   Inner pages: listings, property, sell, contact, 404
+   ========================================================= */
+
+.page-head { padding: clamp(40px, 7vw, 100px) 0 clamp(30px, 4vw, 50px); }
+.page-head .lead { margin-top: 22px; }
+
+/* ================= LISTINGS ================= */
+.filters-wrap { position: sticky; top: var(--header-h); z-index: 20; background: rgba(14,13,12,.86); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-block: 1px solid var(--line); }
+.filters { display: flex; flex-wrap: wrap; align-items: end; gap: 14px 28px; padding: 16px 0 6px; }
+.f-group { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+.f-group legend { padding: 0; margin-bottom: 8px; }
+.seg { display: inline-flex; padding: 4px; border-radius: 999px; border: 1px solid var(--line-2); }
+.seg button { padding: 8px 16px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font-weight: 600; font-size: .88rem; transition: background-color .45s var(--ease), color .3s; }
+.seg button:hover { color: var(--text); }
+.seg button[aria-pressed='true'] { background: var(--text); color: var(--bg); }
+.f-selects { display: flex; flex-wrap: wrap; gap: 12px; margin-left: auto; }
+.f-mini { gap: 6px; }
+.f-mini label { font-size: .66rem; }
+.f-mini select { min-height: 44px; padding: 8px 36px 8px 14px; border-radius: 999px; appearance: none; background: var(--bg-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a45c' stroke-width='1.6'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center / 16px; font-size: .88rem; }
+.f-count { padding: 4px 0 14px; color: var(--faint); font-size: .85rem; letter-spacing: .04em; }
+.listings .card-grid { position: relative; }
+.empty { display: grid; justify-items: start; gap: 16px; padding: 60px 0; }
+.empty h2 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
+.empty p { color: var(--muted); max-width: 46ch; }
+.empty-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 760px) {
+  .filters-wrap { position: relative; top: 0; }
+  .filters { gap: 14px; }
+  .seg { width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .seg button { flex: 1; padding: 8px 10px; white-space: nowrap; }
+  .f-group { width: 100%; }
+  .f-selects { margin-left: 0; width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .f-mini select { padding-right: 28px; background-position: right 8px center; }
+}

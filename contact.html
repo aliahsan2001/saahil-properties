@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Contact · Saahil Properties</title>
+<meta name="description" content="Speak to a Saahil Properties agent about buying or selling in DHA and Clifton. Visit our DHA Phase 6 office, call, or message us on WhatsApp.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="contact">
+
+  <section class="page-head" aria-labelledby="ct-title">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1 id="ct-title" class="display" data-rise>Four people who<br><em>know the coast.</em></h1>
+      <p class="lead">Each of us looks after one kind of property, so you always speak to someone who has walked those streets this week.</p>
+      <div class="agents-stage" data-agents></div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="visit-title">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow">Visit or call</p>
+        <h2 id="visit-title" class="sr-only">Visit or call</h2>
+        <p class="big" data-sharpen>Our office is a short drive from both Clifton and the DHA coast. Come for tea, bring your questions, and leave with a shortlist.</p>
+        <ul class="contact-list">
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Saahil House, 14-C Khayaban-e-Bukhari,<br>DHA Phase 6, Karachi<small>Free parking at the front</small></span></li>
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+922135840000">+92 21 3584 0000</a><small>Mon – Sat, 11 am – 8 pm · Sunday by appointment</small></span></li>
+          <li><svg aria-hidden="true"><use href="#i-wa"/></svg><span><a href="https://wa.me/" data-wa-chat target="_blank" rel="noopener">WhatsApp an agent</a><small>Replies within the hour during office hours</small></span></li>
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg><span><a href="mailto:hello@saahil.example">hello@saahil.example</a><small>For documents and longer questions</small></span></li>
+        </ul>
+        <div class="coast-map" aria-label="Map: the office sits in DHA Phase 6, between Clifton and the DHA coast" role="img">
+          <svg viewBox="0 0 600 300" aria-hidden="true">
+            <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(27,26,23,.06)"/></pattern></defs>
+            <rect width="600" height="300" fill="url(#grid)"/>
+            <path d="M0 210 C90 200 140 230 210 222 S330 180 400 205 S520 260 600 240 V300 H0Z" fill="#d9e3e6"/>
+            <path d="M0 210 C90 200 140 230 210 222 S330 180 400 205 S520 260 600 240" fill="none" stroke="#1b1a17" stroke-width="1.4"/>
+            <path class="map-road" d="M60 40 C120 90 170 110 230 130 S360 150 470 120" fill="none" stroke="#1b1a17" stroke-width="1" stroke-dasharray="4 5"/>
+            <text x="90" y="120" font-family="Cormorant Garamond, serif" font-size="26" fill="#1b1a17">Clifton</text>
+            <text x="420" y="175" font-family="Cormorant Garamond, serif" font-size="26" fill="#1b1a17">DHA</text>
+            <text x="250" y="280" font-family="Manrope, sans-serif" font-size="11" letter-spacing="3" fill="#5a554c">ARABIAN SEA</text>
+            <g transform="translate(318 150)"><circle r="22" fill="rgba(201,164,92,.25)"/><circle r="7" fill="#8e7037"/><text x="14" y="-14" font-family="Manrope, sans-serif" font-size="12" font-weight="700" fill="#1b1a17">Saahil House</text></g>
+          </svg>
+        </div>
+      </div>
+      <form class="contact-form" data-contact novalidate>
+        <h2 class="display">Send us a note</h2>
+        <div class="form-grid">
+          <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required><p class="field-error" id="ce-name"></p></div>
+          <div class="field"><label for="c-phone">Mobile</label><input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="03xx xxxxxxx" required><p class="field-error" id="ce-phone"></p></div>
+        </div>
+        <div class="field"><label for="c-about">I'm looking to</label><select id="c-about" name="about"><option>Buy an apartment</option><option>Buy a house</option><option>Buy a plot</option><option>Sell my property</option><option>Something else</option></select></div>
+        <div class="field"><label for="c-msg">Message <span class="optional">(optional)</span></label><textarea id="c-msg" name="msg" rows="4" placeholder="Budget, area, timing, anything that helps"></textarea></div>
+        <button class="btn btn-gold" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp</button>
+        <p class="form-note label" data-contact-note>We'll connect you with the right agent.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+<!-- @include footer -->
+</body>
+</html>

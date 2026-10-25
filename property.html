@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Property · Saahil Properties</title>
+<meta name="description" content="Photos, price, travel times and an installment plan for this property, with a 3D model of the building you can rotate floor by floor.">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body data-barba="wrapper">
+<!-- @include header -->
+<main id="main" data-barba="container" data-barba-namespace="property">
+
+  <section class="prop-hero" aria-label="Property">
+    <div class="container">
+      <a class="text-link back-link" href="/listings"><svg aria-hidden="true"><use href="#i-back"/></svg>All listings</a>
+      <div class="prop-grid">
+        <div class="gallery" data-gallery></div>
+        <div class="prop-info" data-info></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="ov-title">
+    <div class="container prop-overview">
+      <div>
+        <p class="eyebrow">Overview</p>
+        <h2 id="ov-title" class="sr-only">Overview</h2>
+        <p class="ov-text" data-blurb data-sharpen></p>
+      </div>
+      <div class="ov-side">
+        <h3 class="label">Features</h3>
+        <ul class="feature-list" data-features></ul>
+        <h3 class="label">By car</h3>
+        <ul class="travel-big" data-travel></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight explore" id="explore" aria-labelledby="ex-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-ex-eyebrow>Explore in 3D</p>
+          <h2 id="ex-title" class="display" data-ex-title>Pick a floor.<br><em>See what's free.</em></h2>
+        </div>
+        <p class="lead" data-ex-lead>Drag to turn the building. Hover a floor to highlight it and click to see its units. Then move the down payment slider: the floors fill with gold to show what you pay up front.</p>
+      </div>
+      <div class="explore-grid">
+        <div class="model-stage" data-stage>
+          <canvas data-model aria-hidden="true"></canvas>
+          <div class="floor-tip" data-tip hidden></div>
+          <p class="model-hint"><svg aria-hidden="true"><use href="#i-rotate"/></svg>Drag to turn · click a floor</p>
+          <div class="floor-stack" data-stack role="group" aria-label="Floors"></div>
+          <div class="plot-view" data-plot hidden></div>
+        </div>
+        <div class="explore-side">
+          <div class="floor-panel" data-floor-panel aria-live="polite"></div>
+          <form class="calc" data-calc></form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" aria-labelledby="sim-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">You might also like</p>
+          <h2 id="sim-title" class="display">Nearby, <em>similar</em></h2>
+        </div>
+      </div>
+      <div class="card-grid" data-similar></div>
+    </div>
+  </section>
+
+</main>
+<!-- @include footer -->
+</body>
+</html>
