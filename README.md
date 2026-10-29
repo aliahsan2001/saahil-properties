@@ -1,5 +1,13 @@
 # Saahil Properties: "From blueprint to skyline"
 
+[**Live demo**](https://saahil-properties.vercel.app) · [Source files](./src/) · [Local setup](#run-it)
+
+## Project at a glance
+
+Listing filters, procedural building models, installment calculations, and a multi-step valuation prototype.
+
+**Scope:** Frontend concept with sample listings, availability, and valuation data. No live property inventory or lead-management backend.
+
 Concept project 4 of 8 for the Aqoa Systems portfolio. A fictional real estate agency selling apartments, houses and plots in DHA and Clifton, Karachi.
 
 ## What's in it
@@ -29,7 +37,7 @@ The buildings are procedural, so there are no model files. One shader draws both
 ## Run it
 From a terminal:
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 The site uses ES modules, so it needs a server. Opening `index.html` by double-clicking won't work. Testing flags: `?lite` forces the lighter version, `?full` forces 3D.
